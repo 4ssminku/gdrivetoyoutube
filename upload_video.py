@@ -180,7 +180,7 @@ def initialize_upload():
                            default="")
     argparser.add_argument("--privacyStatus", choices=VALID_PRIVACY_STATUSES,
                            default=VALID_PRIVACY_STATUSES[0], help="Video privacy status.")
-    args = argparser.parse_args()
+    args, unknown = parser.parse_known_args()
     youtube = get_authenticated_service(args)
     service = Create_Service(CLIENT_SECRET_FILE, API_SERVICE_NAME_D, API_VERSION, SCOPES_D)
     File_names, File_ids = list_drive_files(service, 'Youtube_Shorts')
