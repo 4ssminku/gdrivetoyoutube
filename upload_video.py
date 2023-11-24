@@ -1,17 +1,16 @@
 #!/usr/bin/python
 
 import httplib2
-import os
+
 import random
 import sys
 import time
-import requests
+
 from Google import *
 
-from google_auth_oauthlib.flow import Flow, InstalledAppFlow
-from google.oauth2 import service_account
+
 from googleapiclient.discovery import build
-from google.auth.transport.requests import Request
+
 from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 from oauth2client.client import flow_from_clientsecrets

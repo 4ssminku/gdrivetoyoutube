@@ -1,10 +1,6 @@
-import self as self
 
-from Google import *
 from upload_video import *
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-from google.auth.transport.requests import Request
+
 
 from flask import Flask, render_template, request
 
