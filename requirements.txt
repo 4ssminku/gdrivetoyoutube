@@ -12,3 +12,4 @@ google-auth-oauthlib==0.4.1
 
 httplib2==0.22.0
 Flask>=2.0.0,<3.0.0
+gunicorn==19.7.1
