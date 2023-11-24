@@ -44,6 +44,7 @@ def submit():
         return render_template('result.html', result=result)
 
 if __name__ == '__main__':
+    import argparse
     app.run(debug=True)
 
 
