@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Flask App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #8e24aa, #ce93d8);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Press Submit button to start Auto upload</h1>
+    <h3>Make Sure files are avaiable in gdrive folder named </h3>
+    <p>Click here to upload file to drive<a href="https://drive.google.com/drive/folders/11tPZdzH8K12YeKfTHOD_5b4vMQkrFzm6?usp=sharing" target="_blank"> Gdrive Link--></a></p>
+    <form method="post" action="{{ url_for('submit') }}">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

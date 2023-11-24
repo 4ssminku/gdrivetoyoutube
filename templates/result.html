@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Flask App - Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #8e24aa, #ce93d8);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+            color: #f4f4f4;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #1e6091;
+        }
+    </style>
+</head>
+<body>
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+    <a href="{{ url_for('index') }}">Go back</a>
+</body>
+</html>
