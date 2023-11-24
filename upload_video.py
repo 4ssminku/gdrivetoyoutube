@@ -7,7 +7,6 @@ import sys
 import time
 import requests
 from Google import *
-from dotenv import load_dotenv
 
 from google_auth_oauthlib.flow import Flow, InstalledAppFlow
 from google.oauth2 import service_account
@@ -19,7 +18,6 @@ from oauth2client.client import flow_from_clientsecrets
 from oauth2client.file import Storage
 from oauth2client.tools import argparser, run_flow
 
-load_dotenv()
 # Explicitly tell the underlying HTTP transport library not to retry, since
 # we are handling retry logic ourselves.
 httplib2.RETRIES = 1
@@ -44,8 +42,7 @@ RETRIABLE_STATUS_CODES = [500, 502, 503, 504]
 #   https://developers.google.com/youtube/v3/guides/authentication
 # For more information about the client_secrets.json file format, see:
 #   https://developers.google.com/api-client-library/python/guide/aaa_client_secrets
-CLIENT_SECRETS_FILE = "client_secret.env"
-CLIENT_SECRETS_FILE = os.getenv("CLIENT_SECRETS_FILE", "default_value_if_not_present")
+CLIENT_SECRETS_FILE = "client_secret.json"
 
 
 # This OAuth 2.0 access scope allows an application to upload files to the
